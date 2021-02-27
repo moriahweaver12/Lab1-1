@@ -53,9 +53,9 @@ public:
 	    cout << "In remove";
 		for(int i = 0; i < tasks.size(); i++){
             cout << endl << i << endl;
-			if(_task.compare(tasks[i])==0){
+			if(tasks[i].find(_task) != std::string::npos){
 				cout << "I am in the process of erasing!!!";
-				tasks.erase (tasks.begin()+ (i-1));
+				tasks.erase (tasks.begin()+ i);
                 return 1;
 			}
             else {
